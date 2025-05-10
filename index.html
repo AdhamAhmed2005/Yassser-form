@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>شحن رصيد</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="glass-container animate-in">
+    <img src="assets/voda.png" alt="logo" class="logo animate-bounce">
+    <p class="credit">By:Mohamed Yasser</p>
+
+    <div class="service-buttons">
+      <button class="service-btn active" data-service="recharge">شحن رصيد</button>
+      <button class="service-btn" data-service="packages">باقات</button>
+    </div>
+
+    <div id="rechargeForm">
+      <div class="form-group animate-slide">
+        <label>اختار الرصيد:</label>
+        <select id="balance" name="balance" class="fade-in">
+          <option value="">اختر القيمة</option>
+          <option value="50">50 جنيه</option>
+          <option value="100">100 جنيه</option>
+          <option value="200">200 جنيه</option>
+          <option value="300">300 جنيه</option>
+          <option value="400">400 جنيه</option>
+          <option value="500">500 جنيه</option>
+          <option value="1000">1000 جنيه</option>
+        </select>
+        <div class="validation-message" id="balanceValidation"></div>
+      </div>
+
+      <div class="form-group animate-slide">
+        <label>رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" placeholder="ادخل رقم الهاتف" maxlength="11">
+        <div class="validation-message" id="phoneValidation"></div>
+      </div>
+
+      <div class="form-group" id="passwordField" style="display: none;">
+        <label>كلمة المرور:</label>
+        <input type="password" id="password" name="password" placeholder="ادخل كلمة المرور">
+      </div>
+
+      <div class="payment-methods">
+        <div class="payment-option">
+          <input type="radio" id="cashPayment" name="paymentMethod" value="cash">
+          <label for="cashPayment">محفظة كاش</label>
+        </div>
+        <div class="payment-option">
+          <input type="radio" id="instaPayment" name="paymentMethod" value="instapay">
+          <label for="instaPayment">انستاباي</label>
+        </div>
+      </div>
+
+      <div id="cashInfo" class="info-box animate-slide" style="display: none;">
+        <p>ابعت على رقم الكاش ده: 123456</p>
+        <input type="tel" id="cashSender" name="senderInfo" placeholder="اكتب الرقم اللي بعتت منه" maxlength="11">
+      </div>
+
+      <div id="instaInfo" class="info-box animate-slide" style="display: none;">
+        <p>ابعت على اليوزر ده: mbmd42646</p>
+        <input type="text" id="instaSender" name="senderInfo" placeholder="اكتب اليوزر اللي بعتت منه">
+      </div>
+
+      <div class="form-group">
+        <div class="upload-container" id="uploadContainer">
+          <input type="file" id="screenshot" name="image" accept="image/*" class="hidden-input">
+          <div class="upload-area">
+            <span class="upload-icon">📷</span>
+            <p>اضغط هنا لرفع صورة الإيصال</p>
+          </div>
+        </div>
+        <div id="imagePreview" class="image-preview" style="display: none;">
+          <img id="previewImg" src="" alt="Preview">
+          <button class="delete-btn" id="deleteImage">×</button>
+        </div>
+      </div>
+
+      <button id="submitBtn" class="submit-btn animate-pulse">شحن</button>
+
+      <div id="successContainer" class="success-message" style="display: none;">
+        تم تقديم الطلب بنجاح!
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
