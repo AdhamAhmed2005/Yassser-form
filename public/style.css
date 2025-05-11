@@ -1,0 +1,322 @@
+/* Importing Noto Sans Arabic for clean Arabic typography */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fef3f2, #fee2e2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: 'Cairo', sans-serif; /* Apply a modern and elegant Arabic font to the whole page */
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo {
+  width: 150px; /* Increased size of the Vodafone logo */
+  height: auto;
+  margin: 0 auto 16px;
+  animation: float 2s infinite ease-in-out;
+}
+
+/* Updated credit text styling to animate only on hover */
+.credit {
+  font-family: 'Cairo', sans-serif; /* Use a modern and elegant Arabic font */
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0; /* Keep the credit text static */
+  margin-bottom: 20px; /* Added margin to the bottom of the credit text */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.service-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.service-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #e5e7eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-btn.active,
+.service-btn:hover {
+  background: #e60000;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #e60000;
+}
+
+.validation-message {
+  color: #e60000;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  min-height: 16px;
+  text-align: right;
+}
+
+#cashAmount p {
+  font-size: 0.875rem;
+  color: #374151;
+  margin: 8px 0;
+}
+
+.info-box {
+  background: #fef2f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.info-box p {
+  font-size: 0.875rem;
+  color: #991b1b;
+  margin-bottom: 8px;
+}
+
+.upload-container {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.upload-container:hover {
+  border-color: #e60000;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+  color: #e60000;
+}
+
+.upload-area p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.image-preview {
+  margin-top: 12px;
+  position: relative;
+}
+
+#previewImg {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+}
+
+.submit-btn {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #b91c1c;
+}
+
+.success-message {
+  background: #15803d;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Animations */
+.animate-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-slide {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .glass-container {
+    padding: 16px;
+  }
+
+  .service-btn {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+
+  .logo {
+    width: 48px;
+  }
+}
+
+.green-container {
+  background: #d1fae5; /* Light green background */
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+}
+
+.green-container p {
+  font-size: 0.875rem;
+  color: #065f46; /* Dark green text */
+  margin: 8px 0;
+}
